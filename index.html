@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twitty</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+        </div>
+      </nav>
+    </header>
+    <section class="container">
+      <form id="mensajes">
+        <div class="form-group">
+          <label for="tweet">¿Qué pasa?</label>
+          <textarea id="tweet" name="tweet" class="form-control" rows="3"></textarea>
+        </div>
+        <button id="mandar" type="submit" class="btn btn-info btn-primary" disabled>Twittear</button>
+        <span class="contador">/140</span>
+        <span id="contador" class="contador">0</span>
+      </form>
+    </section>
+    <section id="timeline" class="container">
+    </section>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
