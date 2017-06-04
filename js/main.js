@@ -60,10 +60,10 @@
   };
 
   var contarLetras = function (){
-    if($("#tweet").val() > 0){
+    if($("#tweet").length > 0){
       letras ++;
       $("#contador").text(letras);
-    } 
+    }
 
 
   };
