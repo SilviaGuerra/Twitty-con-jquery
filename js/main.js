@@ -67,11 +67,15 @@
         letras ++;
       }
       if(letras == 120){
+        $("#contador").css("color", "#BCB800");
+      }
+      if(letras == 130){
         $("#contador").css("color", "red");
       }
       $("#contador").text(letras);
     }else{
-      $addButton.removeAttr("disabled");
+      var $addButton = $("#mandar");
+      $addButton.attr("disabled", true);
     }
 
 
