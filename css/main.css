@@ -1,5 +1,23 @@
 body{
-  padding: 70px;
+  padding: 80px;
+}
+
+.navbar{
+  background: #d02090;
+}
+
+.nav-wrapper{
+  display: inline;
+}
+
+.twitty{
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+}
+
+.bird{
+  width: 30px;
 }
 
 .contador{

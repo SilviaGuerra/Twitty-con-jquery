@@ -59,13 +59,21 @@
     }
   };
 
-  var contarLetras = function (){
-    if($("#tweet").length > 0){
-      letras ++;
+  var contarLetras = function (event){
+    if(letras < 140){
+      if(event.keyCode == 8){
+        letras--;
+      }else{
+        letras ++;
+      }
+      if(letras == 120){
+        $("#contador").css("color", "red");
+      }
       $("#contador").text(letras);
-    } else if($("#tweet").length == 120){
-      $("#contador").css("color", "#cc33ff");
+    }else{
+      $addButton.removeAttr("disabled");
     }
+
 
   };
 
