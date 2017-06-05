@@ -75,7 +75,10 @@
       $("#contador").text(letras);
     }else{
       var $addButton = $("#mandar");
+      var $bloquear = $("#tweet");
       $addButton.attr("disabled", true);
+      $bloquear.attr("disabled", true);
+
     }
 
 
