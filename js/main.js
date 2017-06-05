@@ -63,8 +63,9 @@
     if($("#tweet").length > 0){
       letras ++;
       $("#contador").text(letras);
+    } else if($("#tweet").length == 120){
+      $("#contador").css("color", "#cc33ff");
     }
-
 
   };
 
