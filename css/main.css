@@ -12,12 +12,13 @@ body{
 
 .twitty{
   display: inline-block;
-  color: #fff;
+  color: #000;
   text-align: center;
 }
 
 .bird{
   width: 30px;
+  color: #000;
 }
 
 .contador{

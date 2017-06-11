@@ -1,6 +1,6 @@
 (function () {
   var contador = 0;
-  var letras = 0;
+  var letras = 140;
 
   var cargarPagina = function () {
     // Envío de Tweet
@@ -60,26 +60,57 @@
   };
 
   var contarLetras = function (event){
-    if(letras < 140){
+    if(letras > -100){
       if(event.keyCode == 8){
-        letras--;
-      }else{
+        if(letras >= 140){
+          letras = 139;
+        }
         letras ++;
+      }else{
+        letras --;
       }
-      if(letras == 120){
+      if(letras == 30){
         $("#contador").css("color", "#BCB800");
       }
-      if(letras == 130){
+      if(letras == 20){
         $("#contador").css("color", "red");
       }
       $("#contador").text(letras);
-    }else{
-      var $addButton = $("#mandar");
-      var $bloquear = $("#tweet");
-      $addButton.attr("disabled", true);
-      $bloquear.attr("disabled", true);
-
     }
+
+    // if(letras == 0){
+    //   var $tweetarea = $("#tweet");
+    //   $tweetarea.attr("row", "9");
+    //
+    // }
+
+    // if(letras > -100 && letras == 0){
+    //   var $addButton = $("#mandar");
+    //   var $bloquear = $("#tweet");
+    //   $addButton.attr("disabled", true);
+    //   $bloquear.attr("disabled", true);
+    // }else{
+    //   var $mensajeContenedor = $("#tweet");
+    //   $mensajeContenedor.val("");
+    //   $letras.val("");
+    // }
+
+
+
+    // if(letras == 0 && >){
+    //   var $addButton = $("#mandar");
+    //   var $bloquear = $("#tweet");
+    //   $addButton.attr("disabled", true);
+    //   $bloquear.attr("disabled", true);
+    // }
+
+    // else{
+    //   var $addButton = $("#mandar");
+    //   var $bloquear = $("#tweet");
+    //   $addButton.attr("disabled", true);
+    //   $bloquear.attr("disabled", true);
+    //
+    // }
 
 
   };
