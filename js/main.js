@@ -39,7 +39,7 @@
     // Borrar contenido de textarea
     $mensajeContenedor.val("");
     $botonAgregar.attr("disabled", true);
-
+    $("#contador").text(contarLetras);
     // bind, apply, call
 
     contador++;
@@ -76,6 +76,7 @@
         $("#contador").css("color", "red");
       }
       $("#contador").text(letras);
+
     }
 
     // if(letras == 0){
