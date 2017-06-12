@@ -39,7 +39,6 @@
     // Borrar contenido de textarea
     $mensajeContenedor.val("");
     $botonAgregar.attr("disabled", true);
-    $("#contador").text(contarLetras);
     // bind, apply, call
 
     contador++;
@@ -74,6 +73,9 @@
       }
       if(letras == 20){
         $("#contador").css("color", "red");
+      }
+      if(letras <= 0){
+        $("#mandar").prop( "disabled", true );
       }
       $("#contador").text(letras);
 
