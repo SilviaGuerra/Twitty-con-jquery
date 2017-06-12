@@ -38,6 +38,8 @@
 
     // Borrar contenido de textarea
     $mensajeContenedor.val("");
+    letras = 140 - $("#tweet").val().length;
+    $("#contador").text(letras);
     $botonAgregar.attr("disabled", true);
     // bind, apply, call
 
@@ -59,62 +61,20 @@
   };
 
   var contarLetras = function (event){
-    if(letras > -100){
-      if(event.keyCode == 8){
-        if(letras >= 140){
-          letras = 139;
-        }
-        letras ++;
-      }else{
-        letras --;
-      }
-      if(letras == 30){
-        $("#contador").css("color", "#BCB800");
-      }
-      if(letras == 20){
-        $("#contador").css("color", "red");
-      }
-      if(letras <= 0){
-        $("#mandar").prop( "disabled", true );
-      }
-      $("#contador").text(letras);
-
+    letras = 140 - $("#tweet").val().length;
+    if(letras >=30){
+      $("#contador").css("color", "#000");
     }
-
-    // if(letras == 0){
-    //   var $tweetarea = $("#tweet");
-    //   $tweetarea.attr("row", "9");
-    //
-    // }
-
-    // if(letras > -100 && letras == 0){
-    //   var $addButton = $("#mandar");
-    //   var $bloquear = $("#tweet");
-    //   $addButton.attr("disabled", true);
-    //   $bloquear.attr("disabled", true);
-    // }else{
-    //   var $mensajeContenedor = $("#tweet");
-    //   $mensajeContenedor.val("");
-    //   $letras.val("");
-    // }
-
-
-
-    // if(letras == 0 && >){
-    //   var $addButton = $("#mandar");
-    //   var $bloquear = $("#tweet");
-    //   $addButton.attr("disabled", true);
-    //   $bloquear.attr("disabled", true);
-    // }
-
-    // else{
-    //   var $addButton = $("#mandar");
-    //   var $bloquear = $("#tweet");
-    //   $addButton.attr("disabled", true);
-    //   $bloquear.attr("disabled", true);
-    //
-    // }
-
+    if(letras < 30){
+      $("#contador").css("color", "#BCB800");
+    }
+    if(letras < 20){
+      $("#contador").css("color", "red");
+    }
+    if(letras < 0){
+      $("#mandar").prop( "disabled", true );
+    }
+    $("#contador").text(letras);
 
   };
 

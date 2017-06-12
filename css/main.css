@@ -24,3 +24,7 @@ body{
 .contador{
   float: right;
 }
+
+#timeline{
+  margin-top: 25px;
+}
