@@ -20,6 +20,10 @@
     // Creamos elementos
     var $postContenedor = $("<article />", { "class": "jumbotron" });
     var $postTexto = $("<label />");
+    var $hora = $("<p>");
+    $hora.text(formatAMPM);
+
+
 
     var identificador = "marcador-" + contador;
 
@@ -31,10 +35,13 @@
 
     // Agregarlos al DOM
     $postContenedor.append($postTexto);
+    $postContenedor.append($hora);
+
 
     // Agregarlo a un elemento existente para visualizarlo
     // contenedor.appendChild(postContenedor);
     $contenedor.prepend($postContenedor);
+
 
     // Borrar contenido de textarea
     $mensajeContenedor.val("");
@@ -78,6 +85,17 @@
 
   };
 
+  var formatAMPM = function() {
+    var date = new Date;
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+  }
 
 
 

@@ -28,3 +28,7 @@ body{
 #timeline{
   margin-top: 25px;
 }
+
+.jumbotron > p{
+  text-align: right;
+}
